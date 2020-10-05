@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FullIP - IP в твоём доступе</title>
+    <meta name="description"
+          content="ipify API is a simple public IP address API, easy enough to integrate into any application in seconds.">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="static/dist/css/prism.css" rel="stylesheet" type="text/css">
+    <link href="static/dist/css/styles_v2.css@v=10.css" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://www.ipify.org/static/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://www.ipify.org/static/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://www.ipify.org/static/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://www.ipify.org/static/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://www.ipify.org/static/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://www.ipify.org/static/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://www.ipify.org/static/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.ipify.org/static/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.ipify.org/static/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://www.ipify.org/static/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.ipify.org/static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://www.ipify.org/static/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.ipify.org/static/images/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/static/images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+<header>
+    <div class="first-level">
+        <div class="content-in-blocks">
+            <div class="logo-block">
+                <a href="/" class="logo">
+                    <img src="static/images/logo.png" alt="ipify logo">
+                </a>
+            </div>
+            <h1>FullIP</h1>
+            <a href="https://t.me/vsevolodhtml" class="btn common-btn with-icon" title="VsevolodHtml">vsevolodhtml <img src="static/svg/chevron-right.svg"></a>
+        </div>
+    </div>
+    <div class="second-level">
+        <div class="content-in-blocks">
+            <div class="menu">
+                <div class="selector"></div>
+                <a href="javascript:void(0);" data-anchor="about">About</a>
+                <a href="javascript:void(0);" data-anchor="api-usage">API usage</a>
+                <a href="javascript:void(0);" data-anchor="code-samples">Code samples</a>
+                <a href="javascript:void(0);" data-anchor="libraries">Libraries</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="about-slide">
+    <div class="svg-bg-map">
+        <img src="static/images/ipify-map.png" alt="ipify map">
+    </div>
+    <div class="content-in-blocks">
+        <h2>Получи IP без риска</h2>
+        <h3>Не надо ждать, быстро и без регистрации, всё открыто!</h3>
+
+        <div class="pre-group-wrapper">
+            <div class="pre-wrapper self-ipv4-block">
+                <span>IPv4</span>
+                <pre><code class="language-bash">$ curl 'https://api.ipify.org?format=json'
+{"ip":"185.103.110.182"}</code></pre>
+            </div>
+            <!--<div class="pre-wrapper self-ipv6-block">
+                <span>IPv4(v6)</span>
+                <pre><code class="language-bash">$ curl 'https://api64.ipify.org?format=json'
+{"ip":"2a00:1450:400f:80d::200e"}</code></pre>
+            </div>-->
+        </div>
+
+    </div>
+</section>
+
+<section class="common-info-slide gray-bg waypoint-block" data-waypoint="about">
+    <div class="waypoint-particle" data-waypoint="about"></div>
+    <div class="content-in-blocks">
+        <h2>Почему FullIP?</h2>
+        <p>Вы считали получение IP сложным и странным знятнием? <br/>Теперь это всё открыто и бесплатно, <span class="span-no-wrap">а нужна</span> только инструкция, и код
+            для получения чистого IP или GEO</p>
+
+        <h3 class="text-center">Полюсы использования FullIP:</h3>
+        <div class="numbered-list-wrapper">
+            <div class="list-column">
+                <div class="item-wrapper">
+                    <span>1</span>
+                    <p>Вы не ограниченны, и легко можете получать IP хоть каждую секунду.</p>
+                </div>
+                <div class="item-wrapper">
+                    <span>2</span>
+                    <p>Мы работаем с IPv4 адресами, что делает вероятность ошибко минимальной.</p>
+                </div>
+                <div class="item-wrapper">
+                    <span class="special-padding">3</span>
+                    <p>Мы онлайн, и при возникновении ошибок готовы помочь!</p>
+                </div>
+            </div>
+            <div class="list-column">
+                <div class="item-wrapper">
+                    <span class="special-padding">4</span>
+                    <p>FullIP открыт всем (посмотрите <span class="span-no-wrap">этот <a href="#" title="IP on GitHub" target="_blank">GitHub репозиторий</a></span>).</p>
+                </div>
+                <div class="item-wrapper">
+                    <span class="special-padding">5</span>
+                    <p>Никто не узнает о ваших посещениях, так как всё анонимно.</p>
+                </div>
+                <div class="item-wrapper">
+                    <span>6</span>
+                    <p>И последнее, FullIP не замедлит ваш сайт(программу).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="waypoint-particle" data-waypoint="about"></div>
+</section>
+
+<section class="common-info-slide waypoint-block" data-waypoint="api-usage">
+    <div class="waypoint-particle" data-waypoint="api-usage"></div>
+    <div class="content-in-blocks">
+        <h2>API FullIP:</h2>
+        <p>Использование FullIP может быть в формате JS, JSON, JSONP и просто text.</p>
+
+        <h3>IPv4</h3>
+        <div class="table-wrapper">
+            <table class="table api-usage-table overflow-auto-table">
+                <thead>
+                <tr>
+                    <td>API URL</td>
+                    <td>Response Type</td>
+                    <td>Sample Output (IPv4)</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="empty-tr-line">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>https://api.ipify.org</code></td>
+                    <td><code>text</code></td>
+                    <td><code>98.207.254.136</code></td>
+                </tr>
+                <tr>
+                    <td><code>https://api.ipify.org?format=json</code></td>
+                    <td><code>json</code></td>
+                    <td><code>{"ip":"98.207.254.136"}</code></td>
+                </tr>
+                <tr>
+                    <td><code>https://api.ipify.org?format=jsonp</code></td>
+                    <td><code>jsonp</code></td>
+                    <td><code>callback({"ip":"98.207.254.136"});</code></td>
+                </tr>
+                <tr>
+                    <td><code>https://api.ipify.org?format=jsonp&callback=getip</code></td>
+                    <td><code>jsonp</code></td>
+                    <td><code>getip({"ip":"98.207.254.136"});</code></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+    <div class="waypoint-particle" data-waypoint="api-usage"></div>
+</section>
+
+<section class="common-info-slide border-top waypoint-block code-samples-block" data-waypoint="code-samples">
+    <div class="waypoint-particle" data-waypoint="code-samples"></div>
+    <div class="content-in-blocks">
+        <h2>Использование в коде:</h2>
+        <p>Тут описано использование кода через разные языки</p>
+
+        <h3>Bash</h3>
+        <pre><code class="language-bash">#!/bin/bash
+
+ip=$(curl -s https://api.ipify.org)
+echo "My public IP address is: $ip"</code></pre>
+
+        <h3>NGS (Next Generation Shell)</h3>
+        <pre><code class="language-bash">ip=`curl -s https://api.ipify.org`
+echo("My public IP address is: $ip")</code></pre>
+
+        <h3>Python</h3>
+        <pre><code class="language-python"># This example requires the requests library be installed.  You can learn more
+# about the Requests library here: http://docs.python-requests.org/en/latest/
+from requests import get
+
+ip = get('https://api.ipify.org').text
+print('My public IP address is: {}'.format(ip))</code></pre>
+
+        <h3>Ruby</h3>
+        <pre><code class="language-ruby">require "net/http"
+
+ip = Net::HTTP.get(URI("https://api.ipify.org"))
+puts "My public IP Address is: " + ip</code></pre>
+
+        <h3>PHP</h3>
+        <pre><code class="language-php">&lt;?php
+    $ip = file_get_contents('https://api.ipify.org');
+    echo "My public IP address is: " . $ip;
+?&gt;</code></pre>
+
+        <h3>Java</h3>
+        <pre><code class="language-java">try (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://api.ipify.org").openStream(), "UTF-8").useDelimiter("\\A")) {
+    System.out.println("My current IP address is " + s.next());
+} catch (java.io.IOException e) {
+    e.printStackTrace();
+}
+</code></pre>
+
+        <h3>Perl</h3>
+        <pre><code class="language-perl">use strict;
+use warnings;
+use LWP::UserAgent;
+
+my $ua = new LWP::UserAgent();
+my $ip = $ua-&gt;get('https://api.ipify.org')-&gt;content;
+print 'My public IP address is: '. $ip;</code></pre>
+
+        <h3>C#</h3>
+        <pre><code class="language-csharp">var httpClient = new HttpClient();
+var ip = await httpClient.GetStringAsync("https://api.ipify.org");
+Console.WriteLine($"My public IP address is: {ip}");</code></pre>
+
+        <h3>VB.NET</h3>
+        <pre><code class="language-csharp">Dim httpClient As New System.Net.Http.HttpClient
+Dim ip As String = Await httpClient.GetStringAsync("https://api.ipify.org")
+Console.WriteLine($"My public IP address is: {ip}")</code></pre>
+
+        <h3>NodeJS</h3>
+        <pre><code class="language-javascript">var http = require('http');
+
+http.get({'host': 'api.ipify.org', 'port': 80, 'path': '/'}, function(resp) {
+  resp.on('data', function(ip) {
+    console.log("My public IP address is: " + ip);
+  });
+});</code></pre>
+
+        <h3>Go</h3>
+        <pre><code class="language-go">package main
+
+import (
+        "io/ioutil"
+        "net/http"
+        "os"
+)
+
+func main() {
+        res, _ := http.Get("https://api.ipify.org")
+        ip, _ := ioutil.ReadAll(res.Body)
+        os.Stdout.Write(ip)
+}</code></pre>
+
+        <h3>Racket</h3>
+        <pre><code class="language-scheme">(require net/url)
+
+(define ip (port->string (get-pure-port (string->url "https://api.ipify.org"))))
+(printf "My public IP address is: ~a" ip)</code></pre>
+
+        <h3>Lisp</h3>
+        <pre><code class="language-scheme">;This example requires the drakma http package installed.
+;It can be found here: http://www.weitz.de/drakma
+
+(let ((stream
+    (drakma:http-request "https://api.ipify.org" :want-stream t)))
+  (let ((public-ip (read-line stream)))
+    (format t "My public IP address is: ~A" public-ip)))</code></pre>
+
+        <h3>Xojo</h3>
+        <pre><code class="language-xojo">Dim s As New HTTPSecureSocket
+Dim t As String = s.Get("https://api.ipify.org",10)
+MsgBox "My public IP Address is: " + t</code></pre>
+
+        <h3>Scala</h3>
+        <pre><code class="language-scala">val addr = scala.io.Source.fromURL("https://api.ipify.org").mkString
+println(s"My public IP address is: $addr")</code></pre>
+
+        <h3>Javascript</h3>
+        <pre><code class="language-javascript">&lt;script type="application/javascript"&gt;
+  function getIP(json) {
+    document.write("My public IP address is: ", json.ip);
+  }
+&lt;/script&gt;
+
+&lt;script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"&gt;&lt;/script&gt;</code></pre>
+
+        <h3>jQuery</h3>
+        <pre><code class="language-javascript">&lt;script type="application/javascript"&gt;
+  $(function() {
+    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+      function(json) {
+        document.write("My public IP address is: ", json.ip);
+      }
+    );
+  });
+&lt;/script&gt;</code></pre>
+
+        <h3>C#</h3>
+        <pre><code class="language-java">using System;
+using System.Net;
+
+namespace Ipify.Examples {
+    class Program {
+        public static void Main (string[] args) {
+            WebClient webClient = new WebClient();
+            string publicIp = webClient.DownloadString("https://api.ipify.org");
+            Console.WriteLine("My public IP Address is: {0}", publicIp);
+        }
+    }
+}</code></pre>
+
+        <h3>Elixir</h3>
+        <pre><code class="language-elixir">:inets.start
+{:ok, {_, _, inet_addr}} = :httpc.request('http://api.ipify.org')
+:inets.stop</code></pre>
+
+        <h3>nim</h3>
+        <pre><code class="language-nim">import HttpClient
+var ip = newHttpClient().getContent("https://api.ipify.org")
+echo("My public IP address is: ", ip)</code></pre>
+
+        <h3>PowerShell</h3>
+        <pre><code class="language-powershell">$ip = Invoke-RestMethod -Uri 'https://api.ipify.org?format=json'
+"My public IP address is: $($ip.ip)"</code></pre>
+
+        <h3>Lua</h3>
+        <pre><code class="language-lua">http.Fetch("https://api.ipify.org", function(body) print("My ip is: " .. body ) end</code></pre>
+
+        <h3>PureBasic</h3>
+        <pre><code class="language-basic">InitNetwork()
+*Buffer = ReceiveHTTPMemory("https://api.ipify.org?format=json")
+If *Buffer
+  ParseJSON(0, PeekS(*Buffer, MemorySize(*Buffer), #PB_UTF8))
+  FreeMemory(*Buffer)
+  Debug GetJSONString(GetJSONMember(JSONValue(0), "ip"))
+EndIf</code></pre>
+
+        <h3>LiveCode</h3>
+        <pre><code
+                class="language-ruby">put "My public IP address is" &amp;&amp; url "https://api.ipify.org"</code></pre>
+
+        <h3>Objective-C</h3>
+        <pre><code class="objectivec">NSURL *url = [NSURL URLWithString:@"https://api.ipify.org/"];
+NSString *ipAddress = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+NSLog(@"My public IP address is: %@", ipAddress);</code></pre>
+
+        <h3 id="swift-sample">Swift</h3>
+        <pre><code class="language-clike">import Foundation
+
+let url = URL(string: "https://api.ipify.org")
+
+do {
+    if let url = url {
+        let ipAddress = try String(contentsOf: url)
+        print("My public IP address is: " + ipAddress)
+    }
+} catch let error {
+    print(error)
+}</code></pre>
+
+        <h3>Arduino</h3>
+        <pre><code class="language-clike">if (client.connect("api.ipify.org", 80)) {
+    Serial.println("connected");
+    client.println("GET / HTTP/1.0");
+    client.println("Host: api.ipify.org");
+    client.println();
+} else {
+    Serial.println("connection failed");
+}</code></pre>
+    </div>
+    <div class="waypoint-particle" data-waypoint="code-samples"></div>
+</section>
+
+<section class="common-info-slide libraries-slide border-top waypoint-block" data-waypoint="libraries">
+    <div class="waypoint-particle" data-waypoint="libraries"></div>
+    <div class="content-in-blocks">
+        <h2>Литература</h2>
+        <p>Надеюсь вам понравилось, и вы будете нашим клиентом =)</p>
+    </div>
+    <div class="waypoint-particle" data-waypoint="libraries"></div>
+</section>
+
+<footer>
+    <div class="content-in-blocks">
+        <div class="flex-content-wrapper">
+            <div class="footer-powered-by uppercase font-regular">FullIP © 2020 - 2030</div>
+            <a href="/" class="logo"><img src="static/images/logo.png" alt="ipify logo"></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="static/dist/js/prism.js" data-manual></script>
+<script src="static/dist/js/main.js@v=10"></script>
+</html>
