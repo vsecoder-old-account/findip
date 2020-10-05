@@ -239,7 +239,7 @@ Console.WriteLine($"My public IP address is: {ip}")</code></pre>
         <h3>NodeJS</h3>
         <pre><code class="language-javascript">var http = require('http');
 
-http.get({'host': 'api.ipify.org', 'port': 80, 'path': '/'}, function(resp) {
+http.get({'host': 'findip2.herokuapp.com', 'port': 80, 'path': '/ip'}, function(resp) {
   resp.on('data', function(ip) {
     console.log("My public IP address is: " + ip);
   });
@@ -285,13 +285,9 @@ MsgBox "My public IP Address is: " + t</code></pre>
 println(s"My public IP address is: $addr")</code></pre>
 
         <h3>Javascript</h3>
-        <pre><code class="language-javascript">&lt;script type="application/javascript"&gt;
-  function getIP(json) {
-    document.write("My public IP address is: ", json.ip);
-  }
-&lt;/script&gt;
-
-&lt;script type="application/javascript" src="https://findip2.herokuapp.com/ip.js"&gt;&lt;/script&gt;</code></pre>
+        <pre><code class="language-javascript">&lt;script type="application/javascript" src="https://findip2.herokuapp.com/ip.js"&gt;&lt;/script&gt;
+        
+&lt;script type="application/javascript"&gt;alert(ip);&lt;/script&gt;</code></pre>
 
         <h3>jQuery</h3>
         <pre><code class="language-javascript">&lt;script type="application/javascript"&gt;
