@@ -68,7 +68,7 @@
         <div class="pre-group-wrapper">
             <div class="pre-wrapper self-ipv4-block">
                 <span>IPv4</span>
-                <pre><code class="language-bash">$ curl 'https://api.ipify.org?format=json'
+                <pre><code class="language-bash">$ curl 'https://findip2.herokuapp.com/ip.json'
 {"ip":"185.103.110.182"}</code></pre>
             </div>
             <!--<div class="pre-wrapper self-ipv6-block">
@@ -146,22 +146,22 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td><code>https://api.ipify.org</code></td>
+                    <td><code>https://findip2.herokuapp.com/ip</code></td>
                     <td><code>text</code></td>
                     <td><code>98.207.254.136</code></td>
                 </tr>
                 <tr>
-                    <td><code>https://api.ipify.org?format=json</code></td>
+                    <td><code>https://findip2.herokuapp.com/ip.json</code></td>
                     <td><code>json</code></td>
                     <td><code>{"ip":"98.207.254.136"}</code></td>
                 </tr>
                 <tr>
-                    <td><code>https://api.ipify.org?format=jsonp</code></td>
+                    <td><code>https://findip2.herokuapp.com/ip.jsonp</code></td>
                     <td><code>jsonp</code></td>
                     <td><code>callback({"ip":"98.207.254.136"});</code></td>
                 </tr>
                 <tr>
-                    <td><code>https://api.ipify.org?format=jsonp&callback=getip</code></td>
+                    <td><code>https://findip2.herokuapp.com/getip.jsonp</code></td>
                     <td><code>jsonp</code></td>
                     <td><code>getip({"ip":"98.207.254.136"});</code></td>
                 </tr>
@@ -182,11 +182,11 @@
         <h3>Bash</h3>
         <pre><code class="language-bash">#!/bin/bash
 
-ip=$(curl -s https://api.ipify.org)
+ip=$(curl -s https://findip2.herokuapp.com/ip)
 echo "My public IP address is: $ip"</code></pre>
 
         <h3>NGS (Next Generation Shell)</h3>
-        <pre><code class="language-bash">ip=`curl -s https://api.ipify.org`
+        <pre><code class="language-bash">ip=`curl -s https://findip2.herokuapp.com/ip`
 echo("My public IP address is: $ip")</code></pre>
 
         <h3>Python</h3>
@@ -194,23 +194,23 @@ echo("My public IP address is: $ip")</code></pre>
 # about the Requests library here: http://docs.python-requests.org/en/latest/
 from requests import get
 
-ip = get('https://api.ipify.org').text
+ip = get('https://findip2.herokuapp.com/ip').text
 print('My public IP address is: {}'.format(ip))</code></pre>
 
         <h3>Ruby</h3>
         <pre><code class="language-ruby">require "net/http"
 
-ip = Net::HTTP.get(URI("https://api.ipify.org"))
+ip = Net::HTTP.get(URI("https://findip2.herokuapp.com/ip"))
 puts "My public IP Address is: " + ip</code></pre>
 
         <h3>PHP</h3>
         <pre><code class="language-php">&lt;?php
-    $ip = file_get_contents('https://api.ipify.org');
+    $ip = file_get_contents('https://findip2.herokuapp.com/ip');
     echo "My public IP address is: " . $ip;
 ?&gt;</code></pre>
 
         <h3>Java</h3>
-        <pre><code class="language-java">try (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://api.ipify.org").openStream(), "UTF-8").useDelimiter("\\A")) {
+        <pre><code class="language-java">try (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://findip2.herokuapp.com/ip").openStream(), "UTF-8").useDelimiter("\\A")) {
     System.out.println("My current IP address is " + s.next());
 } catch (java.io.IOException e) {
     e.printStackTrace();
@@ -223,17 +223,17 @@ use warnings;
 use LWP::UserAgent;
 
 my $ua = new LWP::UserAgent();
-my $ip = $ua-&gt;get('https://api.ipify.org')-&gt;content;
+my $ip = $ua-&gt;get('https://findip2.herokuapp.com/ip')-&gt;content;
 print 'My public IP address is: '. $ip;</code></pre>
 
         <h3>C#</h3>
         <pre><code class="language-csharp">var httpClient = new HttpClient();
-var ip = await httpClient.GetStringAsync("https://api.ipify.org");
+var ip = await httpClient.GetStringAsync("https://findip2.herokuapp.com/ip");
 Console.WriteLine($"My public IP address is: {ip}");</code></pre>
 
         <h3>VB.NET</h3>
         <pre><code class="language-csharp">Dim httpClient As New System.Net.Http.HttpClient
-Dim ip As String = Await httpClient.GetStringAsync("https://api.ipify.org")
+Dim ip As String = Await httpClient.GetStringAsync("https://findip2.herokuapp.com/ip")
 Console.WriteLine($"My public IP address is: {ip}")</code></pre>
 
         <h3>NodeJS</h3>
@@ -255,7 +255,7 @@ import (
 )
 
 func main() {
-        res, _ := http.Get("https://api.ipify.org")
+        res, _ := http.Get("https://findip2.herokuapp.com/ip")
         ip, _ := ioutil.ReadAll(res.Body)
         os.Stdout.Write(ip)
 }</code></pre>
@@ -263,7 +263,7 @@ func main() {
         <h3>Racket</h3>
         <pre><code class="language-scheme">(require net/url)
 
-(define ip (port->string (get-pure-port (string->url "https://api.ipify.org"))))
+(define ip (port->string (get-pure-port (string->url "https://findip2.herokuapp.com/ip"))))
 (printf "My public IP address is: ~a" ip)</code></pre>
 
         <h3>Lisp</h3>
@@ -271,17 +271,17 @@ func main() {
 ;It can be found here: http://www.weitz.de/drakma
 
 (let ((stream
-    (drakma:http-request "https://api.ipify.org" :want-stream t)))
+    (drakma:http-request "https://findip2.herokuapp.com/ip" :want-stream t)))
   (let ((public-ip (read-line stream)))
     (format t "My public IP address is: ~A" public-ip)))</code></pre>
 
         <h3>Xojo</h3>
         <pre><code class="language-xojo">Dim s As New HTTPSecureSocket
-Dim t As String = s.Get("https://api.ipify.org",10)
+Dim t As String = s.Get("https://findip2.herokuapp.com/ip",10)
 MsgBox "My public IP Address is: " + t</code></pre>
 
         <h3>Scala</h3>
-        <pre><code class="language-scala">val addr = scala.io.Source.fromURL("https://api.ipify.org").mkString
+        <pre><code class="language-scala">val addr = scala.io.Source.fromURL("https://findip2.herokuapp.com/ip").mkString
 println(s"My public IP address is: $addr")</code></pre>
 
         <h3>Javascript</h3>
@@ -291,12 +291,12 @@ println(s"My public IP address is: $addr")</code></pre>
   }
 &lt;/script&gt;
 
-&lt;script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"&gt;&lt;/script&gt;</code></pre>
+&lt;script type="application/javascript" src="https://findip2.herokuapp.com/ip.js"&gt;&lt;/script&gt;</code></pre>
 
         <h3>jQuery</h3>
         <pre><code class="language-javascript">&lt;script type="application/javascript"&gt;
   $(function() {
-    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+    $.getJSON("https://findip2.herokuapp.com/ip.json",
       function(json) {
         document.write("My public IP address is: ", json.ip);
       }
@@ -312,7 +312,7 @@ namespace Ipify.Examples {
     class Program {
         public static void Main (string[] args) {
             WebClient webClient = new WebClient();
-            string publicIp = webClient.DownloadString("https://api.ipify.org");
+            string publicIp = webClient.DownloadString("https://findip2.herokuapp.com/ip");
             Console.WriteLine("My public IP Address is: {0}", publicIp);
         }
     }
@@ -320,24 +320,24 @@ namespace Ipify.Examples {
 
         <h3>Elixir</h3>
         <pre><code class="language-elixir">:inets.start
-{:ok, {_, _, inet_addr}} = :httpc.request('http://api.ipify.org')
+{:ok, {_, _, inet_addr}} = :httpc.request('http://findip2.herokuapp.com/ip')
 :inets.stop</code></pre>
 
         <h3>nim</h3>
         <pre><code class="language-nim">import HttpClient
-var ip = newHttpClient().getContent("https://api.ipify.org")
+var ip = newHttpClient().getContent("https://findip2.herokuapp.com/ip")
 echo("My public IP address is: ", ip)</code></pre>
 
         <h3>PowerShell</h3>
-        <pre><code class="language-powershell">$ip = Invoke-RestMethod -Uri 'https://api.ipify.org?format=json'
+        <pre><code class="language-powershell">$ip = Invoke-RestMethod -Uri 'https://findip2.herokuapp.com/ip.json'
 "My public IP address is: $($ip.ip)"</code></pre>
 
         <h3>Lua</h3>
-        <pre><code class="language-lua">http.Fetch("https://api.ipify.org", function(body) print("My ip is: " .. body ) end</code></pre>
+        <pre><code class="language-lua">http.Fetch("https://findip2.herokuapp.com/ip", function(body) print("My ip is: " .. body ) end</code></pre>
 
         <h3>PureBasic</h3>
         <pre><code class="language-basic">InitNetwork()
-*Buffer = ReceiveHTTPMemory("https://api.ipify.org?format=json")
+*Buffer = ReceiveHTTPMemory("https://findip2.herokuapp.com/ip.jsonn")
 If *Buffer
   ParseJSON(0, PeekS(*Buffer, MemorySize(*Buffer), #PB_UTF8))
   FreeMemory(*Buffer)
@@ -346,17 +346,17 @@ EndIf</code></pre>
 
         <h3>LiveCode</h3>
         <pre><code
-                class="language-ruby">put "My public IP address is" &amp;&amp; url "https://api.ipify.org"</code></pre>
+                class="language-ruby">put "My public IP address is" &amp;&amp; url "https://findip2.herokuapp.com/ip"</code></pre>
 
         <h3>Objective-C</h3>
-        <pre><code class="objectivec">NSURL *url = [NSURL URLWithString:@"https://api.ipify.org/"];
+        <pre><code class="objectivec">NSURL *url = [NSURL URLWithString:@"https://findip2.herokuapp.com/ip"];
 NSString *ipAddress = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
 NSLog(@"My public IP address is: %@", ipAddress);</code></pre>
 
         <h3 id="swift-sample">Swift</h3>
         <pre><code class="language-clike">import Foundation
 
-let url = URL(string: "https://api.ipify.org")
+let url = URL(string: "https://findip2.herokuapp.com/ip")
 
 do {
     if let url = url {
@@ -368,10 +368,10 @@ do {
 }</code></pre>
 
         <h3>Arduino</h3>
-        <pre><code class="language-clike">if (client.connect("api.ipify.org", 80)) {
+        <pre><code class="language-clike">if (client.connect("findip2.herokuapp.com", 80)) {
     Serial.println("connected");
     client.println("GET / HTTP/1.0");
-    client.println("Host: api.ipify.org");
+    client.println("Host: findip2.herokuapp.com");
     client.println();
 } else {
     Serial.println("connection failed");
