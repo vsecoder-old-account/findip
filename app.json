@@ -1,0 +1,7 @@
+{
+  "name": "FullIP",
+  "description": "A simple public IP address API.",
+  "repository": "https://github.com/htmlcssphpjs/findip",
+  "logo": "https://raw.githubusercontent.com/htmlcssphpjs/codebin/main/static/code.png",
+  "keywords": ["go", "fullip", "ip", "address", "api"]
+}
