@@ -46,10 +46,10 @@ def getip():
 @app.route("/geo.js", methods=['GET', 'POST'])
 def geo():
     ip = request.headers.get('X-Forwarded-For', request.remote_addr)
-    response = requests.post('http://api.ipstack.com/' + ip + '?access_key=3b1999e8ce7ccc0d70374cf50abe084a&format=1', )
+    response = requests.post('https://geoipt.herokuapp.com/' + ip)
     geojson = json.loads(response.text)
     city = geojson['city']
-    country = geojson['country_name']
+    country = geojson['country']
     return render_template('geo.js', ip=ip, city=city, country=country)
     
 #404
