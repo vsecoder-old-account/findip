@@ -59,7 +59,7 @@ def geo1():
     geojson = json.loads(response.text)
     city = geojson['city']
     country = geojson['country']
-    return render_template('geo.js', geo=geojson)
+    return render_template('geo.json', geo=geojson)
         
     
 #404
