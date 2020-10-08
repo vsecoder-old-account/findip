@@ -52,6 +52,16 @@ def geo():
     country = geojson['country']
     return render_template('geo.js', ip=ip, city=city, country=country)
     
+@app.route("/geo", methods=['GET', 'POST'])
+def geo1():
+    ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    response = requests.post('https://geoipt.herokuapp.com/' + ip)
+    geojson = json.loads(response.text)
+    city = geojson['city']
+    country = geojson['country']
+    return render_template('geo.js', geo=geojson)
+        
+    
 #404
 @app.errorhandler(404)
 def not_found_error(error):
