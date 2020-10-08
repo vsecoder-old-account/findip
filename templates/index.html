@@ -385,7 +385,7 @@ do {
     <div class="waypoint-particle" data-waypoint="libraries"></div>
     <div class="content-in-blocks">
         <h2>GEO</h2>
-        <p>Это тестовая функция, и доступна пока только в формате JS:</p>
+        <p>Это тестовая функция, и доступна пока только в формате JS и JSON:</p>
 <div class="table-wrapper">
             <table class="table api-usage-table overflow-auto-table">
                 <thead>
@@ -402,11 +402,16 @@ do {
                     <td></td>
                 </tr>
                 <tr>
+                    <td><code>https://findip2.herokuapp.com/geo</code></td>
+                    <td><code>json</code></td>
+                    <td><code>{"ip": "98.207.254.136", "aso": "COMCAST-7922", "asn": "7922", "iso_code": "US", "continent_code": "NA", "country": "United States", "continent": "North America", "zip_code": "94015", "state": "California", "state_code": "CA", "city": "Daly City", "latitude": 37.6811, "longitude": -122.4806}</code></td>
+                </tr>
+                <tr>
                     <td><code>https://findip2.herokuapp.com/geo.js</code></td>
                     <td><code>js</code></td>
                     <td><code>let ip = '98.207.254.136';
-let geocity = 'Moscow';
-let geocountry = 'Russia';</code></td>
+let geocity = 'Daly City';
+let geocountry = 'United States';</code></td>
                 </tr>
                 </tbody>
             </table>
